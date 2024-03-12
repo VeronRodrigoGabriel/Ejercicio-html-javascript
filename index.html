@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+
+    <button id="boton">Enviar</button>
+
+    <br><br>
+
+
+
+    <br><br>
+
+    <label id="idTexto">cargue algo  por favor</label>
+
+    <script>
+
+
+        
+       const ejecutar = ()=>{
+
+        document.getElementById('idTexto').style.display = 'none'
+
+        const boton = document.getElementById('boton')
+
+        boton.addEventListener('click', () => {
+            const contenido = document.getElementById('contenido').value
+        
+            if (contenido.length < 1 ) {
+                console.log('a');
+                document.getElementById('idTexto').style.backgroundColor = 'yellow'
+                document.getElementById('idTexto').style.color = 'red'
+                document.getElementById('idTexto').style.display = 'block'
+            } 
+            
+            if (contenido.length > 0)
+            {
+                document.getElementById('idTexto').style.display = 'none'
+                alert(contenido)
+                console.log(contenido);
+             
+            }
+        } 
+        )
+       }
+
+       ejecutar()
+
+    </script>
+
+</body>
+</html>

@@ -8,31 +8,21 @@
 <body>
     <h1>Hola Mundo</h1>
 
-    <button id="boton">Enviar</button>
-
-    <br><br>
-
     <input id="contenido">
-
-    <br><br>
+    <button id="boton">Enviar</button>
 
     <label id="idTexto">cargue algo  por favor</label>
 
     <script>
 
-
-        
-       const ejecutar = ()=>{
-
         document.getElementById('idTexto').style.display = 'none'
 
-        const boton = document.getElementById('boton')
-
         boton.addEventListener('click', () => {
+            const boton = document.getElementById('boton')
             const contenido = document.getElementById('contenido').value
             const newcont = contenido.trim()
+            
             if (newcont.length < 1 ) {
-                console.log('a');
                 document.getElementById('idTexto').style.backgroundColor = 'yellow'
                 document.getElementById('idTexto').style.color = 'red'
                 document.getElementById('idTexto').style.display = 'block'
@@ -45,11 +35,11 @@
                 console.log(contenido);
              
             }
-        } 
+          } 
         )
-       }
+    
 
-       ejecutar()
+  
 
     </script>
 
